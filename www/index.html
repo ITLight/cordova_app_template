@@ -8,11 +8,11 @@
             $(function(){
                 function camSuccess(imgData){
                     $('#imgFrCam').attr("src",imgData);
-                }
+                };
                 
                 function camErr(err){
                     alert(err);
-                }
+                };
                 
                 function accessCam(){
                     var opts = {
@@ -21,7 +21,9 @@
                     };
                     
                     navigator.camera.getPicture(camSuccess, camErr, opts);
-                }
+                };
+                
+                $('#btnCam').on('click',accessCam());
             });
         </script>
         <script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.js"></script>
